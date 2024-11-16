@@ -1,0 +1,97 @@
+/* Reset e Variáveis */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundColor: #f3efec;
+  --primaryColor: #393737;
+  --secondaryColor: #400a19;
+  --navColor: #bdae9a;
+  --buttonColor: #9b876d;
+  --fontPrincipal: "Mulish", sans-serif;
+  --fontSecondary: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: var(--fontPrincipal);
+}
+
+#logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+header {
+  height: 120px;
+  background-color: var(--navColor);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav,
+ul,
+a {
+  display: flex;
+  flex: 2;
+  width: 100%;
+  justify-content: center;
+  gap: 25px;
+  text-decoration: none;
+  font-family: var(--fontPrincipal);
+  font-size: 0.9rem;
+  color: var(--primaryColor);
+  list-style: none;
+}
+
+main {
+  background-color: var(--backgroundColor);
+}
+
+#hero {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.background-hero {
+  width: 100%;
+  max-width: 550px;
+  background-position: 50%;
+  background-image: url(../img/heroimg.jpg);
+  background-size: cover;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 30px;
+  gap: 15px;
+}
+
+.btn-cta {
+  width: 200px;
+  height: auto;
+  background-color: var(--buttonColor);
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: var(--secondaryColor);
+  font-family: var(--fontSecondary);
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
