@@ -67,9 +67,10 @@ main {
 }
 
 .background-hero {
+  flex-basis: 80%;
   width: 100%;
-  max-width: 550px;
-  background-position: 50%;
+  min-width: 550px;
+  background-position: center;
   background-image: url(../img/heroimg.jpg);
   background-size: cover;
 }
@@ -82,6 +83,12 @@ main {
   gap: 15px;
 }
 
+.hero-text {
+  font-family: var(--fontSecondary);
+  font-style: italic;
+  color: var(--secondaryColor);
+}
+
 .btn-cta {
   width: 200px;
   height: auto;
@@ -90,8 +97,17 @@ main {
   border-radius: 10px;
   padding: 10px 20px;
   color: var(--secondaryColor);
-  font-family: var(--fontSecondary);
+  font-family: var(--fontPrincipal);
   font-weight: bold;
   cursor: pointer;
   outline: none;
+}
+
+#services h2 {
+  margin: 20px 0;
+  justify-self: center;
+}
+
+.services-container {
+  display: flex;
 }
