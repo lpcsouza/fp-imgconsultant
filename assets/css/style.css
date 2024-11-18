@@ -36,38 +36,77 @@ body {
 
 nav {
   position: fixed;
+  isolation: isolate;
   width: 100%;
   max-width: var(--max-width);
+  margin-inline: auto;
   z-index: 9;
 }
 
-#logo {
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav__logo img {
   max-width: 150px;
 }
 
-.nav_menu_btn {
+.nav__menu__btn {
   font-size: 1.5rem;
-  color: var(--secondaryColor);
+  color: var(--white);
   cursor: pointer;
 }
 
-.nav_links {
+.nav__links {
   position: absolute;
-  top: 65px;
+  top: 100px;
   left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
-  background-color: var(--buttonColor);
+  background-color: var(--primary-color);
   transition: 0.5s;
   z-index: -1;
-  transform: translateY(-100%);
+  transform: translateY(-150%);
 }
 
-.nav_links.open {
+.nav__links.open {
   transform: translateY(0);
+}
+
+.nav__links a {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.nav__links a:hover {
+  color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+  nav {
+    position: static;
+  }
+
+  .nav__links {
+    transform: translateY(0);
+    position: relative;
+  }
 }
