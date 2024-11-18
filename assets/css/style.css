@@ -1,10 +1,4 @@
 /* Reset e Variáveis */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --backgroundColor: #f3efec;
   --primaryColor: #393737;
@@ -13,101 +7,67 @@
   --buttonColor: #9b876d;
   --fontPrincipal: "Mulish", sans-serif;
   --fontSecondary: "Playfair Display", serif;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  background-color: white;
-  font-family: var(--fontPrincipal);
-}
-
-#logo {
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-}
-
-header {
-  height: 120px;
-  background-color: var(--navColor);
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-nav,
-ul,
 a {
-  display: flex;
-  flex: 2;
-  width: 100%;
-  justify-content: center;
-  gap: 25px;
   text-decoration: none;
-  font-family: var(--fontPrincipal);
-  font-size: 0.9rem;
-  color: var(--primaryColor);
+  transition: 0.3s;
+}
+
+ul {
   list-style: none;
 }
 
-main {
+body {
   background-color: var(--backgroundColor);
-}
-
-#hero {
-  display: flex;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.background-hero {
-  flex-basis: 80%;
-  width: 100%;
-  min-width: 550px;
-  background-position: center;
-  background-image: url(../img/heroimg.jpg);
-  background-size: cover;
-}
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 30px;
-  gap: 15px;
-}
-
-.hero-text {
-  font-family: var(--fontSecondary);
-  font-style: italic;
-  color: var(--secondaryColor);
-}
-
-.btn-cta {
-  width: 200px;
-  height: auto;
-  background-color: var(--buttonColor);
-  border: 0;
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: var(--secondaryColor);
   font-family: var(--fontPrincipal);
-  font-weight: bold;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  max-width: var(--max-width);
+  z-index: 9;
+}
+
+#logo {
+  max-width: 150px;
+}
+
+.nav_menu_btn {
+  font-size: 1.5rem;
+  color: var(--secondaryColor);
   cursor: pointer;
-  outline: none;
 }
 
-#services h2 {
-  margin: 20px 0;
-  justify-self: center;
-}
-
-.services-container {
+.nav_links {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--buttonColor);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+
+.nav_links.open {
+  transform: translateY(0);
 }
