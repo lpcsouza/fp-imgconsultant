@@ -24,6 +24,13 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  margin: 2rem 0;
+  font-family: var(--fontPrincipal);
+  color: var(--primaryColor);
+  text-align: center;
+}
+
 .logo {
   height: 5rem;
 }
@@ -90,13 +97,6 @@ i {
   font-size: 2rem;
 
   max-width: 80%;
-}
-
-#services h2 {
-  margin: 2rem 0;
-  font-family: var(--fontPrincipal);
-  color: var(--primaryColor);
-  text-align: center;
 }
 
 .services-container {
