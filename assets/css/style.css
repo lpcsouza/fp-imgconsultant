@@ -1,7 +1,7 @@
 /* Reset e Variáveis */
 :root {
-  --backgroundColor: #f3efec;
-  --primaryColor: #393737;
+  --whiteSmoke: #f5f5f5;
+  --black: #202020;
   --secondaryColor: #400a19;
   --navColor: #bdae9a;
   --buttonColor: #9b876d;
@@ -20,7 +20,7 @@ html {
 }
 
 main {
-  background-color: var(--backgroundColor);
+  background-color: var(--whiteSmoke);
   font-family: var(--fontPrincipal);
 }
 
@@ -28,6 +28,12 @@ a {
   color: var(--secondaryColor);
   text-decoration: none;
   outline: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo {
@@ -39,10 +45,26 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--backgroundColor);
+  background-color: var(--whiteSmoke);
   padding: 0 3rem;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.network-logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.ri-instagram-line,
+.ri-pinterest-line,
+.ri-tiktok-line,
+.ri-youtube-line {
+  font-size: 1.1rem;
+}
 .menu {
   list-style: none;
   display: flex;
@@ -93,7 +115,7 @@ i {
 
 .hero h1 {
   font-family: var(--fontSecondary);
-  color: var(--backgroundColor);
+  color: white;
   font-size: 2rem;
   font-style: italic;
   text-shadow: 2px 2px 4px #3937378e;
@@ -159,7 +181,7 @@ i {
 }
 
 #about {
-  background-color: #bdae9a;
+  background-color: #fff;
 }
 
 .about-wrapper {

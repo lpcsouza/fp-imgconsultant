@@ -23,8 +23,10 @@
 
   <body>
     <header class="nav-container">
+      <div class="logo-wrapper">
       <a href="#"><img class="logo" src="./assets/img/logo.png" alt="logo" /></a>
       
+      </div>    
       <nav class="nav">
         <button
           class="btn-menu"
@@ -43,12 +45,18 @@
           <li><a href="#">Blog</a></li>
         </ul>
       </nav>
+      <div class="network-logo">
+        <a href="http://instagram.com/fernandapallomo"><i class="ri-instagram-line"></i></a>
+        <i class="ri-pinterest-line"></i>
+        <i class="ri-tiktok-line"></i>
+        <i class="ri-youtube-line"></i>
+      </div>
     </header>
     <main>
     <section class="hero-container">
       <div class="hero">
         <h1>
-          Image consulting for women who want to enhance their beauty and refine their personal style
+          Embrace Your Beauty, Build Your Perfect Wardrobe
         </h1>
       </div>
     </section>
@@ -96,25 +104,29 @@
           <h2>Contact me</h2>
           <p>Ready to enhance your personal style? Let's connect and start your transformation journey. Whether you have questions about my services or want to schedule a consultation, I'm here to help you discover your most confident self.</p>
         </div>
-        <div class="contact-card">
+        <form action="https://formspree.io/f/xrbglygy" 
+            method="POST" 
+            class="contact-card">
           <div class="form-group">
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" />
+            <label for="first-name">First name
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required/></label>
           </div>
           <div class="form-group">
-            <label for="last-name">Last name</label>
+            <label for="last-name">Last name
             <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" />
+          </label>
           </div>
           <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Enter your e-mail" />
+            <label for="email">E-mail
+            <input type="email" id="email" name="email" placeholder="Enter your e-mail" required/>
+          </label>
           </div>
           <div class="form-group">
-            <label for="textarea">Your message</label>
-            <textarea>Tell me about your style goals...</textarea>
+            <label for="textarea">Your message
+            <textarea name="message">Tell me about your style goals...</textarea></label>
           </div>
           <button type="submit">Send</button>
-        </div>
+        </form>
       </div>
 
     </section>
