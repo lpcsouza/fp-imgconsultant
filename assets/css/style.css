@@ -30,6 +30,11 @@ a {
   outline: none;
 }
 
+h2 {
+  font-size: 2rem;
+  font-family: var(--fontSecondary);
+}
+
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -80,16 +85,11 @@ a {
   transition: 0.25s;
 }
 
-.menu a:hover {
-  color: var(--secondaryColor);
-  font-weight: 700;
-}
-
 .btn-menu {
   display: none;
 }
 
-i {
+.ri-menu-line {
   font-size: 2rem;
 }
 
@@ -97,7 +97,7 @@ i {
   width: 100%;
   height: 22rem;
   background-position: center;
-  background-image: url(../img/heroimg.jpg);
+  background-image: url(../img/heroimg.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -123,62 +123,60 @@ i {
   max-width: 80%;
 }
 
-.services-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+/* SECTION: SERVICES */
 
-.cards-content {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
+#services {
+  padding-top: 2rem;
+  background-color: #fff;
 }
 
 #services h2 {
-  font-family: var(--fontSecondary);
-  color: var(--secondaryColor);
   text-align: center;
-  margin: 30px 0;
+}
+
+.services-wrapper {
+  padding: 4rem 10rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .services-card {
-  width: 100%;
-  height: 25rem;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
+  align-items: flex-start;
+  gap: 0.8rem;
 }
 
-.services-card h3 {
-  font-family: var(--fontSecondary);
-  color: var(--primaryColor);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.services-card p {
-  font-size: 0.9rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.192); /* Cor e opacidade do fundo */
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.service-1 {
-  max-width: 22rem;
+.img-service1 {
   background-image: url("../img/colorcard.jpg");
 }
 
-.service-2 {
-  max-width: 22rem;
+.img-service2 {
   background-image: url("../img/kibbecard.jpg");
 }
+
+.img-service1,
+.img-service2 {
+  width: 500px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/* SECTION: TESTIMONIALS */
+
+#testimonials {
+  width: 100%;
+  height: 600px;
+}
+
+/* SECTION: ABOUT ME */
 
 #about {
   background-color: #fff;
@@ -295,9 +293,11 @@ button {
   width: 60%;
   align-self: center;
   background-color: var(--buttonColor);
-  color: var(--secondaryColor);
+  color: var(--black);
   font-family: var(--primaryColor);
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
