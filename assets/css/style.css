@@ -324,6 +324,17 @@ footer {
 
 /* RESPONSIVIDADE */
 
+@media (max-width: 1100px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about-wrapper img {
+    object-fit: cover;
+    justify-self: center;
+  }
+}
+
 @media (max-width: 700px) {
   .menu {
     display: block;
