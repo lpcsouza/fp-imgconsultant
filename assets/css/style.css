@@ -68,7 +68,9 @@ p {
   gap: 2rem;
 }
 
-.ri-menu-line {
+.ri-menu-line,
+.ri-close-line {
+  color: var(--black);
   font-size: 3.2rem;
 }
 
