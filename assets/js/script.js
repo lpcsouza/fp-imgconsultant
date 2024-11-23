@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const btnMenu = document.querySelector(".btn-menu")
-  const nav = document.querySelector(".nav")
+  const nav = document.querySelector(".nav-wrapper")
   const menu = document.getElementById("menu")
 
   // Função para fechar o menu

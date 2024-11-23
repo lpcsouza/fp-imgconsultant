@@ -5,29 +5,32 @@
   --secondaryColor: #400a19;
   --navColor: #bdae9a;
   --buttonColor: #9b876d;
-  --fontPrincipal: "Mulish", sans-serif;
-  --fontSecondary: "Playfair Display", serif;
+  --primary-font: "Mulish", sans-serif;
+  --secondary-font: "Playfair Display", serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: var(--primary-font);
 }
 
 main {
   background-color: var(--whiteSmoke);
-  font-family: var(--fontPrincipal);
 }
 
 a {
   color: var(--secondaryColor);
-  text-decoration: none;
-  outline: none;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -35,193 +38,182 @@ h2 {
   font-family: var(--fontSecondary);
 }
 
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+p {
+  font-size: 1.4rem;
 }
 
-.logo {
-  height: 3rem;
-}
+/* SECTION: NAV */
 
 .nav-container {
-  height: 5rem;
+  padding: 0 7rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--whiteSmoke);
-  padding: 0 3rem;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.network-logo {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.ri-instagram-line,
-.ri-pinterest-line,
-.ri-tiktok-line,
-.ri-youtube-line {
-  font-size: 1.1rem;
-}
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 0.2rem;
-  font-family: var(--fontPrincipal);
-}
-
-.menu a {
-  display: block;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: var(--primaryColor);
-  transition: 0.25s;
+.logo {
+  height: 5rem;
 }
 
 .btn-menu {
   display: none;
 }
 
-.ri-menu-line {
-  font-size: 2rem;
+.menu,
+.network-logo {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 2rem;
 }
 
-.hero-container {
+.ri-menu-line {
+  font-size: 3.2rem;
+}
+
+.ri-instagram-line,
+.ri-pinterest-line,
+.ri-tiktok-line,
+.ri-youtube-line {
+  font-size: 1.8rem;
+}
+
+/* SECTION: HERO */
+
+.hero {
   width: 100%;
-  height: 22rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-image: url(../img/heroimg.jpeg);
   background-size: cover;
   background-position: center;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
 .hero h1 {
-  font-family: var(--fontSecondary);
+  max-width: 80%;
+  font-family: var(--secondary-font);
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   font-style: italic;
   text-shadow: 2px 2px 4px #3937378e;
-
-  max-width: 80%;
 }
 
 /* SECTION: SERVICES */
 
 #services {
-  padding-top: 2rem;
-  background-color: #fff;
+  padding: 3.2rem 0;
 }
 
 #services h2 {
-  text-align: center;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
 }
 
-.services-wrapper {
-  padding: 4rem 10rem;
-}
-
-.cards-container {
+.services-container {
+  padding: 6.4rem 16rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 12rem;
 }
-
-.services-card {
-  width: 500px;
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15em;
+}
+.card {
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
-.img-service1 {
+.card h3 {
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+}
+
+.card-1 {
   background-image: url("../img/colorcard.jpg");
 }
 
-.img-service2 {
+.card-2 {
   background-image: url("../img/kibbecard.jpg");
 }
 
-.img-service1,
-.img-service2 {
-  width: 500px;
-  height: 600px;
+.card-1,
+.card-2 {
+  width: 100%;
+  height: 380px;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
 }
 
-/* SECTION: TESTIMONIALS */
-
-#testimonials {
-  width: 100%;
-  height: 600px;
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  width: 60%;
+  align-self: center;
+  background-color: var(--buttonColor);
+  color: white;
+  font-family: var(--primaryColor);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* SECTION: ABOUT ME */
 
 #about {
-  background-color: #fff;
+  background-color: white;
+  padding: 3.2rem 0;
 }
 
 .about-wrapper {
-  padding: 4rem 10rem;
+  padding: 6.4rem 16rem;
   display: flex;
-  gap: 7rem;
   justify-content: center;
+  gap: 12rem;
 }
 
 .about-wrapper img {
-  max-height: 35rem;
+  max-height: 56rem;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
-  transition: ease-in-out 0.25s;
-}
-
-.about-wrapper img:hover {
-  transform: scale(1.01);
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.192);
 }
 
 .text-content {
-  width: 30rem;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1.5rem;
+  line-height: 2.4rem;
 }
 
 .text-content h2 {
   color: var(--secondaryColor);
-  font-family: var(--fontSecondary);
-  margin-bottom: 1rem;
+  font-family: var(--secondary-font);
+  margin-bottom: 1.6rem;
 }
 
 .signature {
   font-family: var(--fontSecondary);
   font-weight: 700;
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
   text-align: right;
 }
+
+/* CONTACT ME */
 
 #contact {
   background-color: var(--backgroundColor);
@@ -287,30 +279,17 @@ input:focus {
   outline: none;
 }
 
-button {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  width: 60%;
-  align-self: center;
-  background-color: var(--buttonColor);
-  color: var(--black);
-  font-family: var(--primaryColor);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+/* RESPONSIVIDADE */
 
 @media (max-width: 700px) {
   .menu {
     display: block;
     position: absolute;
-    top: 7.5rem;
+    top: 8rem;
     left: 0;
-    background: var(--navColor);
+    background: var(--whiteSmoke);
     text-align: center;
+    font-size: 2.6rem;
     width: 100%;
     height: 0;
     z-index: 1;
@@ -318,24 +297,25 @@ button {
     overflow-y: hidden;
     transition: height 0.5s ease, visibility 0.5s ease;
   }
+
   .menu a {
-    padding: 1rem 0;
-    margin-inline: 1rem;
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    margin: 0.6rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.16);
     border-radius: 0;
   }
+
   .btn-menu {
     background: none;
     border: none;
     font: inherit;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 0;
+    gap: 8rem;
+    padding: 16rem 0;
     cursor: pointer;
   }
 
-  .nav.active .menu {
+  .nav-wrapper.active .menu {
     height: 100%;
     visibility: visible;
     overflow-y: auto;
