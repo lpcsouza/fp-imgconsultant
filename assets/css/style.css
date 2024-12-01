@@ -43,33 +43,66 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 h2 {
-  font-size: 4rem;
-
+  font-size: 3.2rem;
+  text-align: center;
   margin-bottom: 4.8rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
   color: #393737;
 }
 
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  color: #2e2c2c;
+}
+
 p {
-  font-size: 1.8rem;
-  font-family: "Mulish", sans-serif;
-  color: #393737;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  font-family: "Playfair Display", serif;
+  color: #495057;
 }
 
 .nav-content {
   display: flex;
   gap: 2rem;
   font-family: "Mulish", sans-serif;
+  align-items: center;
+}
+
+.btn-contact:link,
+.btn-contact:visited {
+  padding: 1rem 2rem;
+  background-color: var(--mainColor);
+  color: var(--white);
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.075);
+  transition: ease-in 0.2s;
+}
+
+.btn-contact:hover {
+  background-color: #b9ab99;
+}
+
+.btn-contact:active {
+  background-color: #1f1b16;
+}
+
+.blog {
+  display: none;
 }
 
 #hero {
+  margin-top: 20px;
+  background-color: white;
   width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +117,7 @@ p {
   width: 100%;
   height: 700px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -91,6 +125,7 @@ p {
   font-family: "Playfair Display", serif;
   font-size: 2.2rem;
   width: 450px;
+
   margin-bottom: 1rem;
 }
 
@@ -101,20 +136,52 @@ p {
 }
 
 .about-container img {
-  border-radius: 3px;
-}
-.services-wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-.card-container img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
+  max-height: 500px;
   border-radius: 3px;
 }
 
+/* SERVICES */
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px; /* Tamanho fixo para manter uniformidade */
+  padding: 35px 50px;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.075);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.075);
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
 button {
+  width: 100%;
   padding: 1.6rem 3.2rem;
   margin-top: auto;
   background-color: var(--mainColor);
@@ -122,8 +189,95 @@ button {
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
+
   border-radius: 3px;
   border: none;
   cursor: pointer;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.075);
+  transition: ease-in 0.2s;
+}
+
+button:hover {
+  background-color: #b9ab99;
+}
+
+button:active {
+  background-color: #1f1b16;
+}
+
+/* CONTACT ME */
+
+.contact-wrapper {
+  width: 100%;
+  height: 700px;
+  padding: 0 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 35px 50px;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.075);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--greyColor);
+
+  border: none;
+  border-bottom: 1px solid var(--mainColor);
+  background-color: var(--white);
+}
+
+textarea {
+  height: 12rem;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--greyColor);
+  /* box-shadow: 0 0 2px rgba(27, 27, 27, 0.5);  */
+}
+
+label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  background-color: var(--white);
+}
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.copyright-text a:hover {
+  text-decoration: underline;
 }
