@@ -281,3 +281,9 @@ label {
 .copyright-text a:hover {
   text-decoration: underline;
 }
+
+.developed {
+  margin: 0;
+  text-align: right;
+  font-size: 1.2rem;
+}
